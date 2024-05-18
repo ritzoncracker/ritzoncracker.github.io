@@ -1,0 +1,269 @@
+/**ELEMENT SPECIFICS**/
+/**anchor**/
+a {
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: yellow;
+}
+
+/**Text**/
+h1, h2, h3, p {
+  color: white;
+  font-family: cairo;
+}
+
+#abt_desc {
+  text-align: center;
+}
+
+p.desc {
+  font-size: 18px;
+  text-align: left;
+}
+
+h1.title {
+  font-size: 50px;
+  margin: 130px auto;
+  text-align: center;
+}
+
+h2.cont_h {
+  text-align: center;
+}
+
+h3.cont_desc {
+  text-align: center;
+}
+
+/**Gradient**/
+@keyframes gradient_a {
+  from {background-color: #ec4899;}
+  to {background-color: blue;}
+}
+
+@keyframes gradient_b {
+  from {background-color: #f586bd;}
+  to {background-color: #7268fb;}
+}
+
+/** lines **/
+#line {
+  width: 90%;
+  height: 10px;
+  animation: gradient_a 10s ease-in-out infinite alternate-reverse;
+  margin: 0px auto 20px auto;
+}
+
+/**BODY**/
+html { 
+  scroll-behavior: smooth;
+}
+
+body {
+  background: black;
+}
+
+.cont {
+  width: 90%;
+  height: auto;
+  margin: auto;
+  padding: 30px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+div.essay {
+  border-radius: 10px;
+  width: 85%;
+  height: auto;
+  margin: 80px auto;
+  padding: auto;
+  animation: gradient_a 10s ease-in-out infinite alternate-reverse;
+}
+
+div.body {
+  border-radius: 10px;
+  width: 85%;
+  height: auto;
+  padding: auto;
+  margin: auto;
+  text-align: center;
+}
+
+iframe {
+  width: 100%;
+  border: 5px solid black;
+  border-radius: 5px;
+  margin: 30px 0px;
+}
+
+/**MENU**/
+#menu { /**main menu cont**/
+  z-index: 3; /**assures the menu never falls behind an   element**/
+  position: fixed; /**menu stays with scroll**/
+  width: 100%;
+  height: 70px;
+  top: 0; 
+  left: 0;
+  animation: gradient_a 10s ease-in-out infinite alternate-reverse;
+  display: flex;
+  justify-content: space-between;
+} 
+
+h2.menu_title { /**menu title element*/
+  margin: auto 0px auto 20px;
+  font-family: cairo;
+  font-size: 30px;
+  color: white;
+}
+
+ul.menu_items { /**menu items ul, flex-row**/
+  margin: auto 0px;
+  display: flex;
+  flex-flow: row wrap;
+  list-style-type: none;
+  text-align: center;
+  order: 1;
+  font-family: cairo;
+}
+
+
+/** Dropdown menus **/
+button.menu_header {
+  background: none;
+  border: none;
+  font-size: 20px;
+}
+
+li.menuitem {
+  position: relative;
+  display: inline-block;
+  margin: auto 20px;
+}
+
+a.subitem {
+  color: black;
+  padding: 5px;
+}
+
+.dm-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  width: 100%;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 2;
+  font-size: 15px;
+}
+
+dm-content a {
+  text-decoration: none;
+  display: block;
+}
+
+.dm-content a:hover {
+  background-color: white;
+  color: #7268fb;
+}
+
+li.menuitem:hover .dm-content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+li.menuitem:hover .menuitem {
+  background-color: #3e8e41;
+}
+
+/** Button Directory + Button **/
+#butdir {
+  width: 90%;
+  height: auto;
+  margin: 50px auto;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+button.essayb {
+  margin-left: 40px;
+  margin-right: 40px;
+  margin: 40px;
+}
+
+.essayb {
+  width: 130px;
+  height: 50px;
+  color: white;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: 'Cairo';
+  font-weight: 600;
+  line-height: 1em;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  position: relative;
+  display: inline-block;
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+}
+
+.btn-2 {
+  animation: gradient_a 10s ease-in-out infinite alternate-reverse;
+  border: none;
+  z-index: 1;
+}
+.btn-2:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: 5px;
+  background-color: #ffca2e;
+  box-shadow:
+   -7px -7px 20px 0px #fff9,
+   -4px -4px 5px 0px #fff9,
+   7px 7px 20px 0px #0002,
+   4px 4px 5px 0px #0001;
+  transition: all 0.3s ease;
+}
+.btn-2:hover {
+  color: #fff;
+}
+.btn-2:hover:after {
+  top: 0;
+  height: 100%;
+}
+.btn-2:active {
+  top: 2px;
+}
+
+
+/** Bottom **/
+#bottom {
+  width: 100%;
+  height: 50px;
+  margin: auto 0px 0px 0px;
+  animation: gradient_a 10s ease-in-out infinite alternate-reverse;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#bttm {
+  text-align: center;
+}
