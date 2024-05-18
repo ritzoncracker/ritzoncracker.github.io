@@ -45,12 +45,12 @@ h2.cont_h {
 }
 
 /**BODY**/
-html { 
+html {
   scroll-behavior: smooth;
 }
 
 body {
-  background-color: black;
+  background: black;
 }
 
 .cont {
