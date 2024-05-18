@@ -47,9 +47,6 @@ h2.cont_h {
 /**BODY**/
 html { 
   scroll-behavior: smooth;
-}
-
-body {
   background: black;
 }
 
