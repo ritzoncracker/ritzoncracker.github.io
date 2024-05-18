@@ -47,6 +47,9 @@ h2.cont_h {
 /**BODY**/
 html { 
   scroll-behavior: smooth;
+}
+
+body {
   background: black;
 }
 
@@ -159,8 +162,10 @@ li.menuitem:hover .menuitem {
 
 h1.title {
   font-size: 50px;
-  margin: 130px auto;
+  margin: auto;
+  padding: 200px;
   text-align: center;
+  background: black;
 }
 
 img.self {
