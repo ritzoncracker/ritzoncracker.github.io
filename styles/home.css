@@ -1,0 +1,233 @@
+/**ELEMENT SPECIFICS**/
+/**anchor**/
+a {
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: yellow;
+}
+
+/**Text**/
+h1, h2, p {
+  color: white;
+  font-family: cairo;
+}
+
+p.desc {
+  font-size: 18px;
+  text-align: left;
+}
+
+h2.cont_h {
+  text-align: center;
+}
+
+/**Gradient**/
+@keyframes gradient_a {
+  from {background-color: #ec4899;}
+  to {background-color: blue;}
+}
+
+@keyframes gradient_b {
+  from {background-color: #f586bd;}
+  to {background-color: #7268fb;}
+}
+
+/** lines **/
+#line {
+  width: 90%;
+  height: 10px;
+  animation: gradient_a 10s ease-in-out infinite alternate-reverse;
+  margin: 0px auto 100px auto;
+}
+
+/**BODY**/
+html { 
+  scroll-behavior: smooth;
+}
+
+body {
+  background: black;
+}
+
+.cont {
+  width: 90%;
+  height: auto;
+  margin: auto;
+  padding: 30px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+div.essay {
+  border-radius: 10px;
+  width: 85%;
+  height: auto;
+  margin: 80px auto;
+  padding: auto;
+  animation: gradient_a 10s ease-in-out infinite alternate-reverse;
+}
+
+embed {
+  width: 100%;
+  border: 5px solid black;
+  border-radius: 5px;
+  margin: 30px 0px;
+}
+
+/**MENU**/
+#menu { /**main menu cont**/
+  z-index: 3; /**assures the menu never falls behind an   element**/
+  position: fixed; /**menu stays with scroll**/
+  width: 100%;
+  height: 70px;
+  top: 0; 
+  left: 0;
+  animation: gradient_a 10s ease-in-out infinite alternate-reverse;
+  display: flex;
+  justify-content: space-between;
+} 
+
+h2.menu_title { /**menu title element*/
+  margin: auto 0px auto 20px;
+  font-family: cairo;
+  font-size: 30px;
+  color: white;
+}
+
+ul.menu_items { /**menu items ul, flex-row**/
+  margin: auto 0px;
+  display: flex;
+  flex-flow: row wrap;
+  list-style-type: none;
+  text-align: center;
+  order: 1;
+  font-family: cairo;
+}
+
+
+/** Dropdown menus **/
+button.menu_header {
+  background: none;
+  border: none;
+  font-size: 20px;
+}
+
+li.menuitem {
+  position: relative;
+  display: inline-block;
+  margin: auto 20px;
+}
+
+a.subitem {
+  color: black;
+  padding: 5px;
+}
+
+.dm-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  width: 100%;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 2;
+  font-size: 15px;
+}
+
+dm-content a {
+  text-decoration: none;
+  display: block;
+}
+
+.dm-content a:hover {
+  background-color: white;
+  color: #7268fb;
+}
+
+li.menuitem:hover .dm-content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+li.menuitem:hover .menuitem {
+  background-color: #3e8e41;
+}
+
+
+/**ABOUT ME**/
+#about_me {
+  display: flex;
+  flex-direction: row;
+}
+
+#abt_desc {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  height: 90%;
+  margin: auto;
+}
+
+#continue_abtme {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+
+h1.title {
+  font-size: 50px;
+  margin: 150px auto;
+  text-align: center;
+}
+
+img.self {
+  height: 30%;
+  width: 30%;
+  border-radius: 10%;
+  margin: auto;
+}
+
+/** CONTACT **/
+#Contact {
+  display: flex;
+  flex-direction: column;
+  margin: 50px auto 100px auto;
+}
+
+ul.contact_items {
+  margin: auto 0px;
+  width: 95%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  list-style-type: none;
+  text-align: center;
+  font-family: cairo;
+  font-size: 15px;
+  color: white;
+}
+
+li#contact_item {
+  margin: 0px 20px;
+}
+
+/** Bottom **/
+#bottom {
+  width: 100%;
+  height: 50px;
+  margin: auto 0px 0px 0px;
+  animation: gradient_a 10s ease-in-out infinite alternate-reverse;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#bttm {
+  text-align: center;
+}
